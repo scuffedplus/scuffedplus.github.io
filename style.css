@@ -1,6 +1,11 @@
 body {
-    font-family: Algerian;
-  }
+  font-family: Lucida Console, sans-serif, monospace;
+}
 body {
-    color: #4E0110;
-  }
+  color: #14004b;
+}
+
+body.center {
+margin-left: auto; 
+margin-right: auto;
+}
