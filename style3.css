@@ -1,0 +1,11 @@
+body {
+    font-family: sans-serif;
+  }
+body {
+    color: #4E0110;
+  }
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
