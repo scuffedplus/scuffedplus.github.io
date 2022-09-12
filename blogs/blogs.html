@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .titles{
+        color: #E63946;
+        padding-bottom: 40px;
+        font-size: 25px;
+        }
+        .text{
+        color: #1D3557;
+        padding-bottom: 40px;
+        font-size: 18px;
+        }
+        .collapsible {
+        background-color: #a8acdc;
+        color: #fcfcfc;
+        cursor: pointer;
+        padding: 18px;
+        width: 40%;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 18px;
+        <!-- dropdown button colors -->
+        }
+        .active, .collapsible:hover {
+        background-color: #4e459d;
+        }
+        .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: ##fcfdff;
+        color: #1D3557;
+        width: 50%;
+        }
+    </style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blogs</title>
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    <a href="/"> 
+        <p> BACK </p>
+    </a>
+    <div class="titles">
+        <center> <h1> blog posts: </h1></center>
+    </div>
+    <div class="text">
+<center> <h3> any blog updates should be linked below, and dated properly.</h3> </center>
+    </div>
+<center>
+    <button type="button" class="collapsible"> september 2022</button>
+    <div class="content">
+        <p> placeholder</p>
+    </div>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+  </body>
+</html>
