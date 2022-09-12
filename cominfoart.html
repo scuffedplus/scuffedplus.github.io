@@ -9,6 +9,18 @@
       .images{
         text-align: center;
       }
+      .grid-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      background-color: #fcfcfc;
+      padding: 10px;
+      }
+      .grid-item {
+        padding: 10px;
+      }
+      #images {
+        width: 100%
+      }
     </style>
     <head>
         <style>
@@ -84,29 +96,18 @@
                 <div class="titles">
                 <h3> art-examples :</h3>
                 </div>
-                <div class="images">
-                <table>
-                    <tr>
-                        <td><img src="images/delta.jpg" alt=""/></td>
-                        <td><img src="images/lion.jpg" alt=""/></td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/hehe.jpg" alt=""/></td>
-                        <td><img src="images/tau.jpg" alt=""/></td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/cute.jpg" alt=""/></td>
-                        <td><img src="images/peehehe.png" alt=""/></td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/bird.jpg" alt=""/></td>
-                        <td><img src="images/mae.webp" alt=""/></td>
-                    </tr>
-                    <tr>
-                        <td><img src="images/wicker.jpg" alt=""/></td>
-                        <td><img src="images/cool.jpg" alt=""/></td>
-                    </tr>
-                </table>
+                
+                <div class="grid-container">
+                  <div class="grid-item"> <img src="images/delta.jpg" id="images"> </div>
+                  <div class="grid-item"> <img src="images/lion.jpg" id="images"> </div>
+                  <div class="grid-item"> <img src="images/hehe.jpg" id="images"> </div>
+                  <div class="grid-item"> <img src="images/tau.jpg" id="images"> </div>
+                  <div class="grid-item"> <img src="images/cute.jpg" id="images"> </div>
+                  <div class="grid-item"> <img src="images/peehehe.png" id="images"> </div>
+                  <div class="grid-item"> <img src="images/bird.jpg" id="images"> </div>
+                  <div class="grid-item"> <img src="images/mae.webp" id="images"> </div>
+                  <div class="grid-item"> <img src="images/wicker.jpg" id="images"> </div>
+                  <div class="grid-item"> <img src="images/cool.jpg" id="images"> </div>
                 </div>
             </center>
             <div class="text">
