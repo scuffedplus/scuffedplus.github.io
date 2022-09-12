@@ -6,7 +6,6 @@
         }
         .text{
         color: #1D3557
-        
         }
         .collapsible {
         background-color: #a8acdc;
@@ -18,6 +17,7 @@
         text-align: center;
         outline: none;
         font-size: 18px;
+        <!-- dropdown button colors -->
         }
         .active, .collapsible:hover {
         background-color: #4e459d;
@@ -29,16 +29,16 @@
         background-color: ##fcfdff;
         color: #1D3557;
         width: 50%;
+        <!-- dropdown container contents -->
         }
     </style>
+
+
+
     <head>
-        <style>
-        </style>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon"
-            type="x=icon"
-            href="cute1.png">
+        <link rel="shortcut icon" type="x=icon" href="cute1.png">
         <title>the website of scuffed+</title>
         <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     </head>
@@ -57,7 +57,7 @@
                   <p>hi, you wanted to know more about me, so here :</p>
                   <p>my name is sean, i live in california, but i do plan to move to europe eventually.</p>
                   <p>im 15 < <i> 2007 gang! </i> > , pronouns are they/he < <i> prefer they/them a bit </i> >, and im gay and arospec < <i> meaning, i probably wont date you </i> > . </p>
-                  <p>my first language is russian, though i don't speak very well. < <i> my family immigrated from the USSR in the 80s. </i> > i primarily speak english, with a little bit of spanish.  </p>
+                  <p>i primarily speak english, and a little bit of spanish, my first language is russian, though i don't speak very well. < <i> my family immigrated from the USSR in the 80s. </i> >   </p>
 
               </div>
                 <h3> i like just about anything that uses low voltage electricity. </h3>
@@ -81,9 +81,8 @@
                 <h3> i am also hobbyist digital artist and furry.</h3>
                 <button type="button" class="collapsible">more details about my art and furry stuff.</button>
               <div class="content">
-                  <p> i have done art for, well years, but i only got into the furry stuff a few years back. </p>
-                  <p> i do commissions and such, info is below.</p>
-                  <p> i also have a good number of characters that i have drawn or thought up, in a varried state of abandonment, some dont even have names cause i suck at coming up with em.</p>
+                  <p> i have done art for, well years, but i only got into the furry stuff a few years back. i do commissions and such info is below.</p>
+                  <p> i also have a good number of characters that i have drawn, most in varried states of abandonment, some dont even have names cause i suck at coming up with em.</p>
               </div>
 
             
@@ -114,10 +113,13 @@
                     </li>
             </ul>
             </div>
+
+
+
             <script>
                 var coll = document.getElementsByClassName("collapsible");
                 var i;
-                
+
                 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
@@ -129,6 +131,10 @@
     }
   });
 }
+
+
+
+
             </script>
     </body>
 </html>
