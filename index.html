@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html>
     <style>
+    /* stolen w3schools navbar lol */
+    ul {
+  list-style-type: none;
+  margin-top: 12px;
+  margin-left: 8px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: rgba(6, 20, 39, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+        }
+        li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #1d35579a
+}
+
+
         .titles{
-        color: #E63946;
+            color: #E63946;
         }
         .text{
-        color: #1D3557;
-        font-size: 18px;
+            color: #1D3557;
+            font-size: 18px;
         }
         .collapsible {
-        background-color: #a8acdc;
-        color: #fcfcfc;
-        cursor: pointer;
-        padding: 18px;
-        width: 25%;
-        border: none;
-        text-align: center;
-        outline: none;
-        font-size: 18px;
-        <!-- dropdown button colors -->
+            background-color: #1d35579a;
+            color: #fcfcfc;
+            cursor: pointer;
+            padding: 18px;
+            width: 25%;
+            border: none;
+            text-align: center;
+            outline: none;
+            font-size: 18px;
+        /* <!-- dropdown button colors --> */
         }
         .active, .collapsible:hover {
-        background-color: #4e459d;
+            background-color: #1D3557;
         }
         .content {
-        padding: 0 18px;
-        display: none;
-        overflow: hidden;
-        background-color: #fcfdff;
-        color: #1D3557;
-        width: 50%;
-        <!-- dropdown container contents -->
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #ffffff00;
+            color: #1D3557;
+            width: 50%;
+        /* <!-- dropdown container contents --> */
         }
         #images {
         width: 100%;
@@ -47,6 +76,9 @@
         
 
       }
+      body{
+        padding-top: 35px;
+      }
     </style>
 
 
@@ -56,10 +88,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" type="x=icon" href="cute1.png">
         <title>the website of scuffed+</title>
-        <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+        <link href="style.css" rel="stylesheet" type="text/css" media="all">
     </head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <body>
+        <ul>
+            <li><a class="active" href="/">Home</a></li>
+            <li><a href="blogs/blogs.html">Blogs</a></li>
+            <li><a href="cominfoart.html">Art Comissions</a></li>
+        </ul>
 
             <center>
             <div class="titles">
@@ -107,35 +144,7 @@
             </div>
 
             
-            <div class="titles">
-                <a href="blogs/blogs.html">
-                    <h1> my blog </h1>
-                    </div>
-            <div class="titles">
-                <a href="cominfoart.html">
-                    <h1> commission info </h1>
-                </a>
-                </div>
-            <div class="titles">
-                <h1>
-                list-of-links : 
-            </div>
-            <ul>
-                <div class="text">
-                    <li>let steam = 
-                        <a href="https://steamcommunity.com/id/scuffedplus/">scuffed+</a>
-                        ;
-                    </li>
-                    <li>let discord = 
-                        <a href="https://discordapp.com/users/277236130900869120/">scuffed+#2627</a>
-                        ;
-                    </li>
-                    <li>let twitter = 
-                        <a href="https://twitter.com/scuffedplus">@scuffedplus</a>
-                        ;
-                    </li>
-            </ul>
-            </div>
+           
 
 
 

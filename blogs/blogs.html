@@ -1,6 +1,32 @@
 <!DOCTYPE html>
 <html>
     <style>
+      ul {
+  list-style-type: none;
+  margin-top: 12px;
+  margin-left: 8px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: rgba(6, 20, 39, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+        }
+        li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #1d35579a
+}
         .titles{
         color: #E63946;
         padding-bottom: 40px;
@@ -12,7 +38,7 @@
         font-size: 18px;
         }
         .collapsible {
-        background-color: #a8acdc;
+        background-color: #1d35579a;
         color: #fcfcfc;
         cursor: pointer;
         padding: 18px;
@@ -24,15 +50,18 @@
         <!-- dropdown button colors -->
         }
         .active, .collapsible:hover {
-        background-color: #4e459d;
+        background-color: #1D3557;
         }
         .content {
         padding: 0 18px;
         display: none;
         overflow: hidden;
-        background-color: ##fcfdff;
+        background-color: #fcfdff00;
         color: #1D3557;
         width: 50%;
+        }
+        body{
+          padding-top: 35px;
         }
     </style>
   <head>
@@ -41,10 +70,11 @@
     <title>blogs</title>
     <link href="style.css" rel="stylesheet" type="text/css" media="all">
   </head>
-  <body>
-    <a href="/"> 
-        <p> BACK </p>
-    </a>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a class="active" href="blogs.html">Blogs</a></li>
+    <li><a href="cominfoart.html">Art Comissions</a></li>
+</ul>
     <div class="titles">
         <center> <h1> blog posts: </h1></center>
     </div>

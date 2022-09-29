@@ -15,3 +15,29 @@ html{
   
 
 }
+ul {
+  list-style-type: none;
+  margin-top: 12px;
+  margin-left: 8px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: rgba(6, 20, 39, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+        }
+        li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #1d35579a
+}

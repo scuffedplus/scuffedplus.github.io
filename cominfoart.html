@@ -1,5 +1,35 @@
 <html>
     <style>
+      ul {
+  list-style-type: none;
+  margin-top: 12px;
+  margin-left: 8px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: rgba(6, 20, 39, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+        }
+        li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #1d35579a
+}
+
+.active {
+  background-color: #E63946;
+} 
       .titles{
         color: #E63946
       }
@@ -24,6 +54,7 @@
       }
       .wackybuffer{
         padding-top: 10%;
+        padding-bottom: 0.5%;
       }
       .grid-item {
         padding: 5px;
@@ -32,8 +63,8 @@
         width: 100% 
       }
       body{
-
-        background-image: linear-gradient(0deg, rgba(230,57,70,1) 81.9%, rgba(230,100,100,1) 82.9%, rgba(252,150,152,1) 83.9%, rgba(252,200,200,1) 85%, rgba(242,235,235,1) 86%, rgba(252,239,239,1) 88%, rgba(252,252,252,1) 100%);
+        background-image: linear-gradient(0deg, rgba(230,57,70,1) 83.9%, rgba(230,100,100,1) 84.9%, rgba(252,150,152,1) 85.9%, rgba(252,200,200,1) 87%, rgba(242,235,235,1) 88%, rgba(252,239,239,1) 89%, rgba(252,252,252,1) 100%);
+        padding-top: 35px;
       }
     </style>
     <head>
@@ -47,13 +78,14 @@
             <div class="titles">
         <title>scuffed+'s art commissions</title>
             </div>
-        <link href="style.css" rel="stylesheet" type="text/css" media="all">
+        <link href="styleart.css" rel="stylesheet" type="text/css" media="all">
     </head>
     <body>
-            <a href="/">
-                <p> BACK </p>
-                
-            </a>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="blogs/blogs.html">Blogs</a></li>
+        <li><a class="active" href="cominfoart.html">Art Comissions</a></li>
+    </ul>
             
             <center>
               <div class="titles">
@@ -77,7 +109,7 @@
                 
                 <p>  
                   <div class="titles">
-                <h4>Color : </h4>
+                <h3>Color : </h3>
                   </div>
                   <div class="text">
                 Halfbody 20$ | Fullbody 30$ </p>
@@ -86,7 +118,7 @@
                 
                 <p>  
                   <div class="titles">
-                <h4>Refsheet or Custom : </h4>
+                <h3>Refsheet or Custom : </h3>
                   </div>
                   <div class="text">
                 Custom 35$ | Refsheet - Depends, Ask based on request! </p>
@@ -97,18 +129,7 @@
                 everything listed is concrete, but in regards to say, an icon, more complex character or sketches, price is upto negotiation. </p>
                 <p>  anything besides a shot from the hips up or fullbody.</p>
                   </div>
-                <div class="titles">
-                <h3> contact-me :</h3>
-                </div>
-                <div class="text">
-
-                <li>Dm me on Twitter : 
-                    <a href="https://twitter.com/scuffedplus">@scuffedplus</a>
-                    
-                </li>
-                <h4> OR </h4>
-                <li>Dm me on Discord = 
-                    <a href="https://discordapp.com/users/277236130900869120/">scuffed+#2627</a>
+                
                     
                 </li>
                 </div>
