@@ -6,20 +6,34 @@
       .text{
         color: #1D3557
       }
+      .textwhite{
+        color: #fcfcfc;
+        text-align: center;
+      }
+      
       .images{
         text-align: center;
       }
       .grid-container {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      background-color: #fcfcfc;
-      padding: 10px;
+      
+      background-color: rgba(230,57,70,1);
+
+      padding-top: 1%;
+      }
+      .wackybuffer{
+        padding-top: 10%;
       }
       .grid-item {
-        padding: 10px;
+        padding: 5px;
       }
       #images {
-        width: 100%
+        width: 100% 
+      }
+      body{
+
+        background-image: linear-gradient(0deg, rgba(230,57,70,1) 81.9%, rgba(230,100,100,1) 82.9%, rgba(252,150,152,1) 83.9%, rgba(252,200,200,1) 85%, rgba(242,235,235,1) 86%, rgba(252,239,239,1) 88%, rgba(252,252,252,1) 100%);
       }
     </style>
     <head>
@@ -36,7 +50,6 @@
         <link href="/style.css" rel="stylesheet" type="text/css" media="all">
     </head>
     <body>
-        <body background="neowp.png">
             <a href="/">
                 <p> BACK </p>
                 
@@ -102,7 +115,12 @@
                 <div class="titles">
                 <h3> art-examples :</h3>
                 </div>
-                
+                <div class="wackybuffer">
+                <hr width="97%" 
+                  size="15"
+                  color= #fcfcfc noshade>
+
+                  </div>
                 <div class="grid-container">
                   <div class="grid-item"> <img src="images/0000hachirefredesign.png" id="images"> </div>
                   <div class="grid-item"> <img src="images/wadewade.png" id="images"> </div>
@@ -114,12 +132,11 @@
                   <div class="grid-item"> <img src="images/cute.jpg" id="images"> </div>
                   <div class="grid-item"> <img src="images/hehe.jpg" id="images"> </div>
                   <div class="grid-item"> <img src="images/lion.jpg" id="images"> </div>
-                  <div class="grid-item"> <img src="images/mae.webp" id="images"> </div>
-                  <div class="grid-item"> <img src="images/bird.jpg" id="images"> </div>
+
 
                 </div>
             </center>
-            <div class="text">
+            <div class="textwhite">
             <p> all media featured was created by me.</p>
             </div>
             
