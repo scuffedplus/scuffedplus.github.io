@@ -13,15 +13,24 @@
 }
 
 .title-font{
+    /*
     font-family: 'Rubik Bubbles', cursive;
+    */
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .nav-font{
+    /* Everything is sad now :(
     font-family: 'Permanent Marker', cursive;
+    */
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 .default-font{
+    /* it looked so good tho :(
     font-family: 'Indie Flower', cursive;
+    */
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 body {
