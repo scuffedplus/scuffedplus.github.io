@@ -8,8 +8,11 @@
 :root {
     --primary-color: #FFC996;
     --backdrop-color: #583D72;
-    --secondary-color: #9F5F80;
-    --primary-double: #FF8474;
+   /* --secondary-color: #9F5F80;*/
+    --secondary-color: #583D72;
+    /*--primary-double: #FF8474;*/
+    --primary-double: #ffeae2;
+    --tertiary-color: #271b35;
 }
 
 .title-font{
@@ -37,6 +40,7 @@ body {
     background-color: var(--backdrop-color);
     margin: 0;
     padding-top: 4rem;
+    height: 100%;
 }
 
 .text-center{
@@ -60,7 +64,7 @@ body {
 }
 
 nav.navbar{
-    background-color: var(--primary-double);
+    background-color: var(--primary-color);
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     top: 1.5rem;
@@ -79,7 +83,7 @@ nav.navbar li {
 }
 
 nav.navbar li:hover {
-    background-color: var(--primary-color);
+    background-color: var(--primary-double);
     cursor: pointer;
 }
 
@@ -115,15 +119,16 @@ nav.navbar a{
 }
 
 footer{
-    position: relative;
+    position: fixed;
     bottom: 0;
     margin: 0;
     margin-top: 2rem;
     background-image: linear-gradient(var(--primary-color),rgba(0,0,0,0));
     background: rgb(2,0,36);
-    background: linear-gradient(180deg, rgba(2,0,36,0) 0%, var(--primary-color) 100%);
+    background: linear-gradient(180deg, rgba(2,0,36,0) 0%, var(--tertiary-color) 100%);
     width: 100%;
     height: 25vh;
+    
 }
 
 @keyframes to-ham{
