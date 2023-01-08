@@ -8,9 +8,7 @@
 :root {
     --primary-color: #FFC996;
     --backdrop-color: #583D72;
-   /* --secondary-color: #9F5F80;*/
     --secondary-color: #583D72;
-    /*--primary-double: #FF8474;*/
     --primary-double: #ffeae2;
     --tertiary-color: #271b35;
 }
@@ -69,6 +67,21 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+/* Link Style Colors*/
+
+a {
+    color: var(--primary-double);
+  }
+a:hover {
+    color: var(--primary-color);
+  }
+a:active {
+    color: var(--primary-color);
+  }
+a:visited {
+    color: var(--primary-color);
+  }
 
 nav.navbar{
     background-color: var(--primary-color);
@@ -160,9 +173,9 @@ footer{
     display: block;
     padding: 1rem;
     margin-top: 1.5rem;
-    border-top-right-radius: 0.5rem;
+    border-top-right-radius: 1rem;
     width: 50%;
-    border-bottom-right-radius: 0.5rem;
+    border-bottom-right-radius: 1rem;
     background-color: var(--primary-color);
     color: var(--secondary-color);
     border: none;
