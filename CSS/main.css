@@ -45,8 +45,9 @@ body {
 }
 
 .body{
-    padding: 3rem;
+    padding-top: 3rem;
     flex: 1;
+    width: 100%;
 }
 
 .text-center{
@@ -134,6 +135,48 @@ footer{
     width: 100%;
     height: 25vh;
     
+}
+
+.page-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-left: 6rem;
+}
+
+.sub-title{
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 5rem;
+    margin-left: 6rem;
+}
+
+.sub-text{
+    font-size: 1.3rem;
+    color: var(--primary-double);
+    margin-left: 2rem;
+}
+
+.content-button{
+    display: block;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-top-right-radius: 0.5rem;
+    width: 50%;
+    border-bottom-right-radius: 0.5rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.content-button:hover{
+    background-color: var(--primary-double);
+    cursor: pointer;
+}
+
+.collapsible-content{
+    background-color: rgba(0, 0, 0,0.1);
 }
 
 @keyframes to-ham{
