@@ -1,0 +1,13 @@
+.art-container{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.art-container > img{
+    width: 48%;
+    display: inline-block;
+    height: auto;
+}
