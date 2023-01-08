@@ -39,8 +39,14 @@
 body {
     background-color: var(--backdrop-color);
     margin: 0;
-    padding-top: 4rem;
-    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.body{
+    padding: 3rem;
+    flex: 1;
 }
 
 .text-center{
@@ -119,7 +125,6 @@ nav.navbar a{
 }
 
 footer{
-    position: fixed;
     bottom: 0;
     margin: 0;
     margin-top: 2rem;
