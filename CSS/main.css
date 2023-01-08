@@ -192,6 +192,22 @@ footer{
     background-color: rgba(0, 0, 0,0.1);
 }
 
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius:10px;
+    padding-top: 1%;
+}
+
+.grid-item {
+     padding: 5px;
+     border-radius: 5%;
+ }
+
+ #images {
+    width: 100% 
+    }
+
 @keyframes to-ham{
     from{
         visibility: visible;
