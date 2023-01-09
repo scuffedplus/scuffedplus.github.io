@@ -1,0 +1,24 @@
+#back-button{
+    height: 3rem;
+    width: auto;
+    color: white;
+    margin: 1rem;
+}
+
+.blog-title{
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 5rem;
+    margin-left: 6rem;
+}
+
+.blog-body{
+    width: 90%;
+    margin-left: 3rem;
+}
+
+.blog-body > p{
+    font-size: 1.3rem;
+    text-align: left;
+    color: var(--primary-color);
+}
