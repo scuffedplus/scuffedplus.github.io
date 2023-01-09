@@ -1,0 +1,241 @@
+/* TitleFont */
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap');
+/* NavFont */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+/* DefaultFont */
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+:root {
+    --primary-color: #FFC996;
+    --backdrop-color: #583D72;
+    --secondary-color: #583D72;
+    --primary-double: #ffeae2;
+    --tertiary-color: #271b35;
+}
+
+html{
+    font-size: 16px;
+}
+
+.title-font{
+    /*
+    font-family: 'Rubik Bubbles', cursive;
+    */
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.nav-font{
+    /* Everything is sad now :(
+    font-family: 'Permanent Marker', cursive;
+    */
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+.default-font{
+    /* it looked so good tho :(
+    font-family: 'Indie Flower', cursive;
+    */
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+body {
+    background-color: var(--backdrop-color);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.body{
+    padding-top: 3rem;
+    flex: 1;
+    width: 100%;
+}
+
+.text-center{
+    text-align: center;
+    display: block;
+}
+
+.text-left{
+    text-align: left;
+    display: block;
+}
+
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fixed-center{
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Link Style Colors*/
+
+a {
+    color: var(--primary-double);
+  }
+a:hover {
+    color: var(--primary-color);
+  }
+a:active {
+    color: var(--primary-color);
+  }
+a:visited {
+    color: var(--primary-color);
+  }
+
+nav.navbar{
+    background-color: var(--primary-color);
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    top: 1.5rem;
+    position: absolute;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    width: 95%;
+    display: flex;
+    justify-content: left;
+    right: 0;
+}
+
+nav.navbar li {
+    display: inline-block;
+    padding: 0.7rem;
+}
+
+nav.navbar li:hover {
+    background-color: var(--primary-double);
+    cursor: pointer;
+}
+
+nav.navbar ul{
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    list-style-type: none;
+    white-space: nowrap;
+}
+
+nav.navbar a{
+    all:unset;
+    display: block;
+    text-align: center;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+nav.navbar a.active{
+    text-decoration: underline 0.15rem;
+    text-underline-offset: 0.7rem;
+}
+
+.collapsible-content:not(.active){
+    display: none;
+}
+
+.collapsible-content{
+    display: block;
+}
+
+footer{
+    bottom: 0;
+    margin: 0;
+    margin-top: 2rem;
+    background-image: linear-gradient(var(--primary-color),rgba(0,0,0,0));
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,0) 0%, var(--tertiary-color) 100%);
+    width: 100%;
+    height: 25vh;
+    
+}
+
+.page-title {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-left: 6rem;
+}
+
+.sub-title{
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 5rem;
+    margin-left: 6rem;
+}
+
+.sub-text{
+    font-size: 1.3rem;
+    color: var(--primary-double);
+    margin-left: 2rem;
+}
+
+.content-button{
+    display: block;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-top-right-radius: 1rem;
+    width: 50%;
+    border-bottom-right-radius: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+.content-button:hover{
+    background-color: var(--primary-double);
+    cursor: pointer;
+}
+
+.collapsible-content{
+    background-color: rgba(0, 0, 0,0.1);
+}
+
+@media screen and (max-width: 925px) {
+    html{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    html{
+        font-size: 10px;
+    }
+    .page-title{
+        margin-left: 2rem;
+    }
+    .page-title > h1 {
+        text-align: left;
+    }
+    nav.navbar a{
+        all:unset;
+        display: block;
+        text-align: center;
+        color: var(--secondary-color);
+        font-size: 20px;
+    }
+    nav.navbar{
+        background-color: var(--primary-color);
+        border-top-left-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        top: 1.5rem;
+        position: absolute;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        width: 91%;
+        display: flex;
+        justify-content: left;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    html{
+        font-size: 9px;
+    }
+}
+
