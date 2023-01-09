@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <style>
+      ul {
+  list-style-type: none;
+  margin-top: 12px;
+  margin-left: 8px;
+  padding: 0px;
+  overflow: hidden;
+  background-color: rgba(6, 20, 39, 0.5);
+  position: fixed;
+  top: 0;
+  border-radius: 15px 0px 0px 15px;
+  width: 100%;
+        }
+        li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #1d35579a
+}
+        .titles{
+        color: #E63946;
+        padding-bottom: 40px;
+        font-size: 25px;
+        }
+        .text{
+        color: #1D3557;
+        padding-bottom: 40px;
+        font-size: 18px;
+        }
+        .collapsible {
+        background-color: #1d35579a;
+        color: #fcfcfc;
+        border-radius: 15px;
+        cursor: pointer;
+        padding: 18px;
+        margin-bottom: 20px;
+        width: 55%;
+        border: none;
+        text-align: center;
+        outline: none;
+        font-size: 18px;
+        <!-- dropdown button colors -->
+        }
+        .active, .collapsible:hover {
+        background-color: #1D3557;
+        }
+        .content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #fcfdff00;
+        color: #1D3557;
+        width: 50%;
+        }
+        body{
+          padding-top: 35px;
+        }
+        a { color: #E63946; }
+    </style>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>blogs</title>
+    <link href="style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a class="active" href="blogs.html">Blogs</a></li>
+    <li><a href="https://scuffedplus.github.io/gallery.html">Art Gallery</a></li>
+
+</ul>
+    <div class="titles">
+        <center> <h1> blog posts: </h1></center>
+    </div>
+    <div class="text">
+<center> <h3> any blog updates should be linked below, and dated properly.</h3> </center>
+    </div>
+<center>
+    <button type="button" class="collapsible"> september 2022</button>
+    <div class="content">
+        <a href="september 12th.html">
+            <p>september 12th blog post</p>
+        </a> 
+        <a href="september 25th.html">
+          <p>september 25th blog post</p>
+      </a> 
+    </div>
+    <button type="button" class="collapsible"> november 2022</button>
+    <div class="content">
+        <a href="november 3rd.html">
+            <p>november 3rd blog post</p>
+        </a> 
+        <a href="november 28th.html">
+          <p>november 28th blog post</p>
+      </a> 
+    </div>
+    <button type="button" class="collapsible"> december 2022</button>
+    <div class="content">
+        <a href="december 21st.html">
+            <p>december 21st blog post</p>
+        </a> 
+    </div>
+</center>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.display === "block") {
+              content.style.display = "none";
+            } else {
+              content.style.display = "block";
+            }
+          });
+        }
+        </script>
+
+  </body>
+</html>
