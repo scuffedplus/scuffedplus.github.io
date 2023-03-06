@@ -41,13 +41,14 @@ var colors = {
         "tertiary-color": "#ffa7ff93"
     },
     3:{
-        "primary-color": "#4d3ce7",
-        "backdrop-color": "#ffffff",
-        "secondary-color": "#ffffff",
-        "primary-double": "#5369e9",
-        "tertiary-color": "#5d4de9b4"
+        "primary-color": "#ffc996",
+        "backdrop-color": "#583D72",
+        "secondary-color": "#583D72",
+        "primary-double": "#ffeae2",
+        "tertiary-color": "#271b35"
     }
 }
+// when someone in 2000000 years sees the commit, im sorry, the white color was too bright, and the purble one is the best so the BEST option is to replace it with the 1st one so that its 2x more likely to appear :)))
 
 var theme = colors[themeint];
 
