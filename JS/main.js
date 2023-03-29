@@ -43,8 +43,8 @@ var colors = {
 }
 
 
-//var theme = colors[themeint];
-var theme = colors[1];
+var theme = colors[themeint];
+
 
 root.style.setProperty('--primary-color', theme["primary-color"]);
 root.style.setProperty('--backdrop-color', theme["backdrop-color"]);
