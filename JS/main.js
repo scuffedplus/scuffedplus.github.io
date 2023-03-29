@@ -14,7 +14,7 @@ for (var i = 0; i < coll.length; i++) {
 var themeint = sessionStorage.getItem("themeint")
 var root = document.querySelector(':root');
 if(themeint == null){
-    var themeint = Math.floor(Math.random() * colorArrayLengthForRand);
+    var themeint = Math.floor(Math.random() * 3);
     sessionStorage.setItem("themeint", themeint);
 }
 
@@ -41,8 +41,7 @@ var colors = {
         "tertiary-color": "##e65c00"
     }
 }
-// not the stupid color thing, ill add more soon
-var colorArrayLengthForRand = colors.length;
+
 
 var theme = colors[themeint];
 
