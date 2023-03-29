@@ -23,25 +23,29 @@ var colors = {
         "primary-color": "#ffc996",
         "backdrop-color": "#583D72",
         "secondary-color": "#583D72",
-        "primary-double": "#ffeae2"
+        "primary-double": "#ffeae2",
+        "tertiary-color": "#271b35"
     },
     1:{
         "primary-color": "#ee8de6",
         "backdrop-color": "#0f0f0f",
         "secondary-color": "#000000",
-        "primary-double": "#5bebf5"
+        "primary-double": "#5bebf5",
+        "tertiary-color": "#ffa7ff93"
     },
     2:{
         "primary-color": "#e7723c",
         "backdrop-color": "#23272a",
         "secondary-color": "#ffffff",
-        "primary-double": "#f5a55b"
+        "primary-double": "#f5a55b",
+        "tertiary-color": "##e65c00"
     }
     3:{
         "primary-color": "#fff4e6",
         "backdrop-color": "#3c2f2f",
-        "secondary-color": "#854442",
-        "primary-double": "#ffe9cc"
+        "secondary-color": "#be9b7b",
+        "primary-double": "#854442",
+        "tertiary-color": "##e65c00"
     }
 }
 
@@ -53,5 +57,5 @@ root.style.setProperty('--primary-color', theme["primary-color"]);
 root.style.setProperty('--backdrop-color', theme["backdrop-color"]);
 root.style.setProperty('--secondary-color', theme["secondary-color"]);
 root.style.setProperty('--primary-double', theme["primary-double"]);
-
+root.style.setProperty('--tertiary-color', theme["tertiary-color"]);
 
