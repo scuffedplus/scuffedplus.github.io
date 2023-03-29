@@ -14,7 +14,7 @@ for (var i = 0; i < coll.length; i++) {
 var themeint = sessionStorage.getItem("themeint")
 var root = document.querySelector(':root');
 if(themeint == null){
-    var themeint = Math.floor(Math.random() * 3);
+    var themeint = Math.floor(Math.random()*3);
     sessionStorage.setItem("themeint", themeint);
 }
 
@@ -43,7 +43,8 @@ var colors = {
 }
 
 
-var theme = colors[themeint];
+//var theme = colors[themeint];
+var theme = colors[1];
 
 root.style.setProperty('--primary-color', theme["primary-color"]);
 root.style.setProperty('--backdrop-color', theme["backdrop-color"]);
