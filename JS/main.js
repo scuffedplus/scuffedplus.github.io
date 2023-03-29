@@ -14,7 +14,7 @@ for (var i = 0; i < coll.length; i++) {
 var themeint = sessionStorage.getItem("themeint")
 var root = document.querySelector(':root');
 if(themeint == null){
-    var themeint = Math.floor(Math.random() * 4);
+    var themeint = Math.floor(Math.random() * colorArrayLengthForRand);
     sessionStorage.setItem("themeint", themeint);
 }
 
@@ -39,16 +39,10 @@ var colors = {
         "secondary-color": "#000000",
         "primary-double": "#5bebf5",
         "tertiary-color": "#ffa7ff93"
-    },
-    3:{
-        "primary-color": "#ffc996",
-        "backdrop-color": "#583D72",
-        "secondary-color": "#583D72",
-        "primary-double": "#ffeae2",
-        "tertiary-color": "#271b35"
     }
 }
-// when someone in 2000000 years sees the commit, im sorry, the white color was too bright, and the purble one is the best so the BEST option is to replace it with the 1st one so that its 2x more likely to appear :)))
+// not the stupid color thing, ill add more soon
+var colorArrayLengthForRand = colors.length;
 
 var theme = colors[themeint];
 
