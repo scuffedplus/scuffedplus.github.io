@@ -38,14 +38,14 @@ var colors = {
         "backdrop-color": "#23272a",
         "secondary-color": "#ffffff",
         "primary-double": "#f5a55b",
-        "tertiary-color": "##e65c00"
+        "tertiary-color": "#e65c00"
     },
     3:{
         "primary-color": "#fff4e6",
         "backdrop-color": "#3c2f2f",
         "secondary-color": "#be9b7b",
-        "primary-double": "#854442",
-        "tertiary-color": "##e65c00"
+        "primary-double": "#c2a1a0",
+        "tertiary-color": "#e65c00"
     }
 }
 
