@@ -27,18 +27,18 @@ var colors = {
         "tertiary-color": "#271b35"
     },
     1:{
-        "primary-color": "#e7723c",
-        "backdrop-color": "#383737",
-        "secondary-color": "#ffffff",
-        "primary-double": "#f5a55b",
-        "tertiary-color": "#411e0fb4"
-    },
-    2:{
         "primary-color": "#ee8de6",
         "backdrop-color": "#0f0f0f",
         "secondary-color": "#000000",
         "primary-double": "#5bebf5",
         "tertiary-color": "#ffa7ff93"
+    },
+    2:{
+        "primary-color": "#e7723c",
+        "backdrop-color": "#23272a",
+        "secondary-color": "#ffffff",
+        "primary-double": "#f5a55b",
+        "tertiary-color": "##e65c00"
     }
 }
 // not the stupid color thing, ill add more soon
