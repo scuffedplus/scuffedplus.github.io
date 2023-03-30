@@ -59,6 +59,15 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.content-button:hover{
+    background-color: var(--primary-double);
+    cursor: pointer;
+    animation: fbutton .25s 1;}
+@keyframes fbutton {
+    50%{margin-left: -1rem;}
+    100%{}
+}
+
 /* Link Style Colors*/
 
 a {
