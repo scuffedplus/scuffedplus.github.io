@@ -45,7 +45,7 @@ var colors = {
         "backdrop-color": "#3c2f2f",
         "secondary-color": "#be9b7b",
         "primary-double": "#c2a1a0",
-        "tertiary-color": "#fff4e6"
+        "tertiary-color": "##fffaf5"
     }
 }
 
