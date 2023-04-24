@@ -129,14 +129,6 @@ nav.navbar a.active{
     text-underline-offset: 0.7rem;
 }
 
-.collapsible-content:not(.active){
-    display: none;
-}
-
-.collapsible-content{
-    display: block;
-}
-
 footer{
     bottom: 0;
     margin: 0;
@@ -169,6 +161,7 @@ footer{
 }
 
 .content-button{
+    all:unset;
     display: block;
     padding: 1rem;
     margin-top: 1.5rem;
@@ -187,7 +180,17 @@ footer{
     cursor: pointer;
 }
 
+.collapsible-toggle:checked + .collapsible-content{
+    display: block;
+}
+
+.collapsible-toggle{
+    all:unset;
+    width: 50%;
+}
+
 .collapsible-content{
+    display: none;
     background-color: rgba(0, 0, 0,0.1);
 }
 
