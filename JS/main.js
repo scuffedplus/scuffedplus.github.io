@@ -28,11 +28,20 @@ var colors = {
         "tertiary-color": "#e65c00"
     },
     3:{
-        "primary-color": "#fff4e6",
+        "primary-color": "#fff3e8",
         "backdrop-color": "#3c2f2f",
         "secondary-color": "#be9b7b",
         "primary-double": "#c2a1a0",
-        "tertiary-color": "##fffaf5"
+        "tertiary-color": "#fffaf5"
+        
+    },
+    4:{
+        "primary-color": "#5BCEFA",
+        "backdrop-color": "#ffffff",
+        "secondary-color": "#995688",
+        "primary-double": "#5BCEFA",
+        "tertiary-color": "#fffaf5"
+        
     }
 }
 
