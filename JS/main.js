@@ -36,9 +36,9 @@ var colors = {
         
     },
     4:{
-        "primary-color": "#5BCEFA",
-        "backdrop-color": "#ffffff",
-        "secondary-color": "#995688",
+        "primary-color": "#ffffff",
+        "backdrop-color": "#F5A9B8",
+        "secondary-color": "#F5A9B8",
         "primary-double": "#5BCEFA",
         "tertiary-color": "#fffaf5"
         
