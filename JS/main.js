@@ -1,7 +1,7 @@
 var themeint = sessionStorage.getItem("themeint")
 var root = document.querySelector(':root');
 if(themeint == null){
-    var themeint = Math.floor(Math.random()*4);
+    var themeint = Math.floor(Math.random()*5);
     sessionStorage.setItem("themeint", themeint);
 }
 
