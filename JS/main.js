@@ -22,10 +22,10 @@ var colors = {
     },
     2:{
         "primary-color": "#e7723c",
-        "backdrop-color": "#23272a",
+        "backdrop-color": "#0f0f0f",
         "secondary-color": "#ffffff",
         "primary-double": "#f5a55b",
-        "tertiary-color": "#e65c00"
+        "tertiary-color": "#e7723c"
     },
     3:{
         "primary-color": "#fff3e8",
