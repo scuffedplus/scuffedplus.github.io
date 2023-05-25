@@ -193,7 +193,8 @@ footer{
 
 .collapsible-content{
     display: none;
-    background-color: rgba(44, 44, 44, 0.021);
+    background-blend-mode: multiply;
+    background-color: rgba(44, 44, 44, 0.055);
 }
 
 @media screen and (max-width: 925px) {
