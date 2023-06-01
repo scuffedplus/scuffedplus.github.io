@@ -4,8 +4,9 @@ if(themeint == null){
     var themeint = Math.floor(Math.random()*5);
     sessionStorage.setItem("themeint", themeint);
 }
+/*deprecated old colors lol*/
 
-var colors = {
+var colorsOld = {
     0:{
         "primary-color": "#ffc996",
         "backdrop-color": "#583D72",
@@ -46,12 +47,37 @@ var colors = {
 }
 
 
-var theme = colors[themeint];
+var colors = {
+    0:{
+        "main-color": "#ee8de6",
+        "highlight-color": "#5bebf5"
+    },
+    1:{
+        "main-color": "#5BCEFA",
+        "highlight-color": "#F5A9B8"
+    },
+    2:{
+        "main-color": "#fb7e14",
+        "highlight-color": "#fdb77b"
+    },
+    3:{
+        "main-color": "#fff3e8",
+        "highlight-color": "#321e44"
+    },
+    4:{
+        "main-color": "#A62639",
+        "highlight-color": "#DB324D"
+    }
+}
 
-
+var theme = colorsOld[themeint];
 root.style.setProperty('--primary-color', theme["primary-color"]);
 root.style.setProperty('--backdrop-color', theme["backdrop-color"]);
 root.style.setProperty('--secondary-color', theme["secondary-color"]);
 root.style.setProperty('--primary-double', theme["primary-double"]);
 root.style.setProperty('--tertiary-color', theme["tertiary-color"]);
+
+var theme = colors[themeint];
+root.style.setProperty('--main-color', theme["main-color"]);
+root.style.setProperty('--highlight-color', theme["highlight-color"]);
 
