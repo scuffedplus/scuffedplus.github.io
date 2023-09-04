@@ -10,8 +10,4 @@
     width: 48%;
     display: inline-block;
     height: 100%;
-    border-radius: 2.5%;
-    border-style:ridge;
-    border-width: 0.2rem;
-    border-color: var(--primary-color);
 }
