@@ -1,13 +1,19 @@
+
 .art-container{
     max-width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
     gap: 0.5rem;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat(2, minmax(10rem, 1fr));
 }
 
-.art-container > img{
-    width: 48%;
-    display: inline-block;
-    height: 100%;
+@media only screen and (max-width: 600px) {
+    .art-container{
+        grid-template-columns: repeat(1, minmax(10rem, 1fr));
+    }
+}
+
+.art-container > img {
+    width: 100%;
+    height: auto;
 }
