@@ -34,6 +34,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .body{
@@ -98,6 +99,8 @@ nav.navbar{
     display: flex;
     justify-content: left;
     right: 0;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 nav.navbar li {
