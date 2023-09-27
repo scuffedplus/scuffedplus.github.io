@@ -1,5 +1,0 @@
-.devcontainer
-target
-Cargo.toml
-src
-Cargo.lock
