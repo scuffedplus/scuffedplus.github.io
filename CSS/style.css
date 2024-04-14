@@ -1,44 +1,195 @@
-body {
-  font-family: Lucida Console, sans-serif, monospace;
-}
-body {
-  color: #14004b;
-}
-html{
 
-  min-height: 100%;
+body {
+    font-family: "Lucida Console", Monaco, monospace;
+    background-color: #f3f3f3;
+}
+    /*background-repeat:*/
+    /*background-attachment:fixed;*/
+    /*background-size:inherit;*/ 
 
-  background: linear-gradient(0deg, rgba(230,57,70,1) 0%,
-   rgba(230,100,100,1) 5%, rgba(252,150,152,1) 10%,
-    rgba(252,200,200,1) 15%, rgba(242,235,235,1) 20%,
-     rgba(252,239,239,1) 25%, rgba(252,252,252,1) 100%);
-  
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.sidenav {
+    background-color: rgb(27, 27, 27);
+    width: 10rem; /* adjust as needed */
+    display: flex;
+    height: 100vh;
+    padding-top: 1rem;
+    position: fixed;
 
 }
 ul {
-  list-style-type: none;
-  margin-top: 12px;
-  margin-left: 8px;
-  padding: 0px;
-  overflow: hidden;
-  background-color: rgba(6, 20, 39, 0.5);
-  position: fixed;
-  top: 0;
-  width: 100%;
-        }
-        li {
-  float: left;
+    font-size: 0.9rem;
+    list-style-type: none;
+    margin: 0.05rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #ffffff;
 }
 
 li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    display: block;
+    color: #92a6ff;
+    text-decoration: none;
+    transition: font-style 0.1s ease-in-out;
 }
 
-li a:hover:not(.active) {
-  background-color: #1d35579a
+li a::before {
+    content: " / "; /* Add the desired character here */
+
+    font-style: normal;
+
+    color: #ffffff; /* Apply the desired color */
+    /* Add any additional styling for the character */
 }
-a { color: #E63946; }
+
+/* Change the link color and add animation on hover */
+li a:hover {
+    color: white;
+    font-style: italic;
+    animation: hoverAnimation 0.1s ease-in-out;
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(0.9);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.container {
+    display: flex;
+}
+
+
+
+hr {
+    width: 7.7rem;
+    border: none;
+    border-top: 0.01rem dashed rgb(255, 255, 255);
+    padding-top: 0.1rem;
+
+    padding-bottom: 0.1rem;
+}
+
+details {
+    color: #92a6ff;
+}
+
+details:hover {
+    color: white;
+    font-style: italic;
+    animation: hoverAnimation 0.1s ease-in-out;
+}
+
+.mainbox0 {
+    max-width: 40rem;
+    margin: 3rem;
+    background-color: rgba(27, 27, 27, 0.4);
+    backdrop-filter: blur(5px);
+    background-blend-mode: overlay;
+    height: 55%;
+    border-radius: 5px;
+    overflow: auto;
+}
+
+.mainbox1 {
+    max-width: 40rem;
+    margin: 3rem;
+    background-color: rgba(27, 27, 27, 0.4);
+    backdrop-filter: blur(5px);
+    background-blend-mode: overlay;
+    height: 45%;
+    border-radius: 5px;
+
+
+}
+
+.body-content {
+    margin-left: 10rem;
+    width: 100%;
+}
+
+.image1 {
+    background-color: #f3f3f3;
+    margin: 1rem;
+    border-radius: 5px;
+    margin-top: 3rem;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: rgba(27, 27, 27, 1);
+
+}
+
+.text1 {
+
+    line-height: 1.2;
+
+    margin-left: 20px;
+    margin-right: 10px;
+    word-wrap: break-word;
+
+
+}
+
+h2 {
+    background-color: rgba(27, 27, 27, 1);
+    color: #f3f3f3;
+    border-radius: 2px;
+    margin: 0.5rem;
+    text-indent: 10px;
+    
+
+}
+.empty {
+    width: 100%; /* Adjust this value based on the number of columns in your grid */
+}
+
+.caption { 
+    margin-top: -2%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.gallery-grid {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  
+    gap: 1rem;
+ 
+}
+
+.gallery-grid > img {
+    margin-top: 1rem;
+    width: 48%;
+    display: inline-block;
+    height: 100%;
+    border-width: 2px;
+    border-style: dashed;
+    border-color: rgba(27, 27, 27, 1);
+
+}
+
+.artbox1 {
+    max-width: 95%;
+    margin: 1rem;
+    background-color: rgba(27, 27, 27, 0.4);
+    backdrop-filter: blur(5px);
+    background-blend-mode: overlay;
+    height: 100%;
+    border-radius: 5px;
+
+
+}
+
+

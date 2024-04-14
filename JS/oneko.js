@@ -1,113 +1,25 @@
-var themeint = sessionStorage.getItem("themeint")
-var root = document.querySelector(':root');
-if(themeint == null){
-    var themeint = Math.floor(Math.random()*7);
-    sessionStorage.setItem("themeint", themeint);
-}
-/*deprecated old colors lol*/
-
-var colorsOld = {
-    0:{
-        "primary-color": "#ffc996",
-        "backdrop-color": "#583D72",
-        "secondary-color": "#583D72",
-        "primary-double": "#ffeae2",
-        "tertiary-color": "#271b35"
-    },
-    1:{
-        "primary-color": "#ee8de6",
-        "backdrop-color": "#0f0f0f",
-        "secondary-color": "#000000",
-        "primary-double": "#5bebf5",
-        "tertiary-color": "#ffa7ff93"
-    },
-    2:{
-        "primary-color": "#e7723c",
-        "backdrop-color": "#0f0f0f",
-        "secondary-color": "#ffffff",
-        "primary-double": "#f5a55b",
-        "tertiary-color": "#e7723c"
-    },
-    3:{
-        "primary-color": "#fff3e8",
-        "backdrop-color": "#3c2f2f",
-        "secondary-color": "#be9b7b",
-        "primary-double": "#f7d3d2",
-        "tertiary-color": "#fffaf5"
-        
-    },
-    4:{
-        "primary-color": "#ffffff",
-        "backdrop-color": "#F5A9B8",
-        "secondary-color": "#F5A9B8",
-        "primary-double": "#5BCEFA",
-        "tertiary-color": "#fffaf5"
-        
-    }
-}
-
-
-var colors = {
-    0:{
-        "main-color": "#ee8de6",
-        "highlight-color": "#5bebf5"
-    },
-    1:{
-        "main-color": "#5BCEFA",
-        "highlight-color": "#F5A9B8"
-    },
-    2:{
-        "main-color": "#F5D0C5",
-        "highlight-color": "#D69F7E"
-    },
-    3:{
-        "main-color": "#fff3e8",
-        "highlight-color": "#321e44"
-    },
-    4:{
-        "main-color": "#E7DFC6",
-        "highlight-color": "#623CEA"
-    },
-    5:{
-        "main-color": "#F7D08A",
-        "highlight-color": "#F79F79"
-    },
-    6:{
-        "main-color": "#CECCCC",
-        "highlight-color": "#9D6381"
-    }
-}
-
-var theme = colorsOld[themeint];
-root.style.setProperty('--primary-color', theme["primary-color"]);
-root.style.setProperty('--backdrop-color', theme["backdrop-color"]);
-root.style.setProperty('--secondary-color', theme["secondary-color"]);
-root.style.setProperty('--primary-double', theme["primary-double"]);
-root.style.setProperty('--tertiary-color', theme["tertiary-color"]);
-
-var theme = colors[themeint];
-root.style.setProperty('--main-color', theme["main-color"]);
-root.style.setProperty('--highlight-color', theme["highlight-color"]);
-
-// ONEKO WOW
-
 // oneko.js: https://github.com/adryd325/oneko.js
 
 (function oneko() {
+  const isReducedMotion =
+    window.matchMedia(`(prefers-reduced-motion: reduce)`) === true ||
+    window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
+
+  if (isReducedMotion) return;
+
   const nekoEl = document.createElement("div");
+
   let nekoPosX = 32;
   let nekoPosY = 32;
+
   let mousePosX = 0;
   let mousePosY = 0;
-  const isReduced = window.matchMedia(`(prefers-reduced-motion: reduce)`) === true || window.matchMedia(`(prefers-reduced-motion: reduce)`).matches === true;
-  if (isReduced) {
-    return;
-  }
 
   let frameCount = 0;
   let idleTime = 0;
   let idleAnimation = null;
   let idleAnimationFrame = 0;
+
   const nekoSpeed = 10;
   const spriteSets = {
     idle: [[-3, -3]],
@@ -172,26 +84,50 @@ root.style.setProperty('--highlight-color', theme["highlight-color"]);
     ],
   };
 
-  function create() {
+  function init() {
     nekoEl.id = "oneko";
+    nekoEl.ariaHidden = true;
     nekoEl.style.width = "32px";
     nekoEl.style.height = "32px";
     nekoEl.style.position = "fixed";
     nekoEl.style.pointerEvents = "none";
-    nekoEl.style.backgroundImage = "url(https://github.com/adryd325/oneko.js/blob/main/oneko.gif?raw=true)";
     nekoEl.style.imageRendering = "pixelated";
-    nekoEl.style.left = `${nekoPosX - 32}px`;
-    nekoEl.style.top = `${nekoPosY + 8}px`;
+    nekoEl.style.left = `${nekoPosX - 16}px`;
+    nekoEl.style.top = `${nekoPosY - 16}px`;
     nekoEl.style.zIndex = Number.MAX_VALUE;
+
+    let nekoFile = "./oneko.gif"
+    const curScript = document.currentScript
+    if (curScript && curScript.dataset.cat) {
+      nekoFile = curScript.dataset.cat
+    }
+    nekoEl.style.backgroundImage = `url(${nekoFile})`;
 
     document.body.appendChild(nekoEl);
 
-    document.addEventListener("mousemove",function(){
+    document.addEventListener("mousemove", function (event) {
       mousePosX = event.clientX;
       mousePosY = event.clientY;
     });
 
-    window.onekoInterval = setInterval(frame, 100);
+    window.requestAnimationFrame(onAnimationFrame);
+  }
+
+  let lastFrameTimestamp;
+
+  function onAnimationFrame(timestamp) {
+    // Stops execution if the neko element is removed from DOM
+    if (!nekoEl.isConnected) {
+      return;
+    }
+    if (!lastFrameTimestamp) {
+      lastFrameTimestamp = timestamp;
+    }
+    if (timestamp - lastFrameTimestamp > 100) {
+      lastFrameTimestamp = timestamp
+      frame()
+    }
+    window.requestAnimationFrame(onAnimationFrame);
   }
 
   function setSprite(name, frame) {
@@ -299,5 +235,5 @@ root.style.setProperty('--highlight-color', theme["highlight-color"]);
     nekoEl.style.top = `${nekoPosY - 16}px`;
   }
 
-  create();
+  init();
 })();
