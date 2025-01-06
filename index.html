@@ -1,116 +1,118 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-    <!-- Local CSS and JS-->
-    <link href="CSS/style.css" rel="stylesheet" type="text/css" media="all">
-    
-    
-    <title>foxgirl.fyi | home</title>
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
-    <meta name="keywords" content="s1erra, s1erradev, sierradev, @s1erra, @s1erra_dev, s1erra.dev">
-    
-
+  <title>Inline HSV Color Wheel (No Libraries)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <style>
+    body {
+      margin: 20px;
+      font-family: sans-serif;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    canvas {
+      border: 1px solid #ccc;
+      cursor: pointer;
+    }
+    h3 {
+      margin-bottom: 10px;
+    }
+  </style>
 </head>
-
-
 <body>
+  <div class="container">
+    <h3>Click anywhere on the color wheel to change the background!</h3>
+    <canvas id="colorWheel" width="300" height="300"></canvas>
+  </div>
 
-    <div class="container">
-        <div class="sidenav">
-            <ul>
-                <p>pages</p>
-                <hr>
-                <li>
-                    <a href="/">Home</a>
-                </li>
+  <script>
+    function hsvToRgb(h, s, v) {
+      const c = v * s;
+      const x = c * (1 - Math.abs((h / 60) % 2 - 1));
+      const m = v - c;
+      let r, g, b;
 
-                <li>
-                    <a href="music.html">Music</a>
-                </li>
+      if (0 <= h && h < 60) {
+        r = c; g = x; b = 0;
+      } else if (h < 120) {
+        r = x; g = c; b = 0;
+      } else if (h < 180) {
+        r = 0; g = c; b = x;
+      } else if (h < 240) {
+        r = 0; g = x; b = c;
+      } else if (h < 300) {
+        r = x; g = 0; b = c;
+      } else {
+        r = c; g = 0; b = x;
+      }
 
-                <li>
-                    <a href="tech.html">Technology</a>
-                </li>
+      return {
+        r: Math.round((r + m) * 255),
+        g: Math.round((g + m) * 255),
+        b: Math.round((b + m) * 255)
+      };
+    }
 
-                <li>
-                    <a href="games.html">Games</a>
-                </li>
+    function drawColorWheel() {
+      const canvas = document.getElementById("colorWheel");
+      const ctx = canvas.getContext("2d");
+      const { width, height } = canvas;
+      const imageData = ctx.createImageData(width, height);
+      const data = imageData.data;
 
+      const cx = width / 2;
+      const cy = height / 2;
+      const radius = Math.min(cx, cy);
 
-                <li>
-                    <a href="art.html">Art</a>
-                </li>
-
+      for (let y = 0; y < height; y++) {
+        for (let x = 0; x < width; x++) {
+          const dx = x - cx;
+          const dy = y - cy;
+          const dist = Math.sqrt(dx * dx + dy * dy);
           
+          if (dist <= radius) {
+            let angle = Math.atan2(dy, dx) * (180 / Math.PI);
+            if (angle < 0) angle += 360;
 
-                <p>contact me</p>
-                <hr>
-               
-                <li>
-                    <details>
-                        <summary>discord</summary>
-                        <a>
-                        @s1erra
-                        </a>
-                    </details>
-                </li>
-                <li>
-                    <a href="https://bsky.app/profile/s1erra.dev">bluesky</a>
-                </li> 
-                <li>
-                    <a href="https://steamcommunity.com/id/s1erra/">steam</a>
-                </li> 
-                <li>
-                    <a href="https://github.com/scuffedplus">github</a>
-                </li>
-                <li>
-                    <a href="https://vrchat.com/home/user/usr_efefd882-2220-4ae8-ba2d-24472a866cdc">vrchat</a>
-                </li>
-                
-                
-                
-            </ul>
-        </div>
+            const sat = dist / radius;
+            
+            // Fix value at 1 for brightness
+            const { r, g, b } = hsvToRgb(angle, sat, 1);
+            
+            const index = (y * width + x) * 4;
+            data[index]     = r;   // Red
+            data[index + 1] = g;   // Green
+            data[index + 2] = b;   // Blue
+            data[index + 3] = 255; // Alpha
+          }
+        }
+      }
+      
+      // Update the canvas pixels
+      ctx.putImageData(imageData, 0, 0);
+    }
 
-        <div class="body-content">
-            <div class="mainbox0">
-                <div class="container">
-                    <div class="image1">
-                        <img src="/Images/chibi1.png" width="125" title="art by @rreave">
-                    </div>
-                    <div class="text1">
-                        <h2>hello.</h2>
+    window.onload = () => {
+      drawColorWheel();
 
-                        <p> welcome to my website!</p>
-                        <br>
-                        <p>this is just a personal page to share about myself, so feel free to poke around. this page a home page and houses some basic information
-                        about me and the pages of this site. i don't use social media much so this is the best spot to find me. feel free to message me if you'd like.
-                        </P><P>anyway, have fun exploring!
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="mainbox1">
-                <div class="container">
-                    
-                    <div class="text1">
-                        <h2>about me.</h2>
+      const canvas = document.getElementById("colorWheel");
+      const ctx = canvas.getContext("2d");
 
-                        <p>hi, im sierra.</p>
-                        <br>
-                        <p>im ur probably not so local foxgirl. im trans, queer, neurdivergent, and quite possibly a bit annoying. im a big nerd about everything 
-                            from art to electronics, so feel free to stike up a conversation with me. </p>
-                            <br>
-                        <p>i go by she/it pronouns, though they/them is fine by me as well. im 17 years old, and i currently live in california. anyway, for any
-                             more specifics though, you're gonna have to ask me yourself. :3 </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+      canvas.addEventListener("click", (e) => {
+        const rect = canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const pixel = ctx.getImageData(x, y, 1, 1).data;
 
-    </div>
-
+        const [r, g, b, a] = pixel;
+        if (a > 0) { // If alpha > 0, it's inside the color wheel
+          document.body.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+        }
+      });
+    };
+  </script>
 </body>
-<script src="JS/script.js"></script>
 </html>
