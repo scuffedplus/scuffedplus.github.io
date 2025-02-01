@@ -152,7 +152,7 @@ details:hover {
 }
 
 .image1 {
-    max-width: 125px;
+    max-width: 130px;
     height: fit-content;
     background-color: #f3f3f3;
     flex-shrink: 0;
@@ -173,6 +173,7 @@ details:hover {
     margin-left: 20px;
     margin-right: 10px;
     word-wrap: break-word;
+    
 
 
 }
