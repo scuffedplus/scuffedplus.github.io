@@ -208,4 +208,28 @@
   
     create();
   })();
-  
+
+document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".gallery-grid > img");
+
+    images.forEach((image) => {
+        image.addEventListener("mouseover", () => {
+            const rect = image.getBoundingClientRect();
+            const centerX = window.innerWidth / 2;
+            const centerY = window.innerHeight / 2;
+
+            // Calculate translation values
+            const translateX = centerX - (rect.left + rect.width / 2);
+            const translateY = centerY - (rect.top + rect.height / 2);
+
+            // Apply translation directly to the transform property
+            image.style.transition = "transform 0.3s ease-in-out";
+            image.style.transform = `translate(${translateX}px, ${translateY}px) scale(1.4)`;
+        });
+
+        image.addEventListener("mouseout", () => {
+            // Reset translation and scaling
+            image.style.transform = "translate(0, 0) scale(1)";
+        });
+    });
+});

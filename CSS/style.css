@@ -1,7 +1,3 @@
-
-
-
-
 body {
     font-family: "Lucida Console", Monaco, monospace;
     background-image: url("/Images/image.png");
@@ -184,7 +180,7 @@ h2 {
     border-radius: 2px;
     margin: 0.5rem;
     text-indent: 10px;
-    
+    padding-right: 10px; /* Adjusted padding for text inside */
 
 }
 .empty {
@@ -200,22 +196,53 @@ h2 {
 .gallery-grid {
     max-width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Allow wrapping to create rows */
     justify-content: center;
-  
     gap: 1rem;
- 
 }
 
 .gallery-grid > img {
+    flex: 0 0 calc(50% - 1rem); /* Each image takes up half the row minus the gap */
+    max-width: 100%; /* Ensure images do not exceed their container */
+    height: auto; /* Maintain aspect ratio */
     margin-top: 1rem;
-    width: 48%;
-    display: inline-block;
-    height: 100%;
     border-width: 2px;
     border-style: dashed;
     border-color: rgba(27, 27, 27, 1);
+}
 
+.image-container {
+    flex: 0 0 calc(50% - 0.3rem); /* Each container takes up half the row minus the gap */
+    max-width: calc(90% - 1rem); /* Ensure containers do not exceed their row */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.2rem; /* Reduced padding inside the container */
+    position: relative; /* Ensure stacking context for images */
+}
+
+.image-container img {
+    max-width: 90%; /* Ensure images fit within their container */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px dashed rgba(27, 27, 27, 1); /* Move border effect to images */
+    transition: transform 0.3s ease-in-out; /* Smooth animation for scaling */
+    transform-origin: center; /* Ensure scaling happens from the center */
+    position: relative; /* Default stacking context */
+    z-index: 1; /* Ensure normal stacking for non-hovered images */
+}
+
+
+
+.image-positive:hover {
+    transform: translate(50%) scale(1.5); /* Positive translation */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+    z-index: 10; /* Bring the hovered image to the front */
+}
+
+.image-negative:hover {
+    transform: translate(-50%) scale(1.5); /* Negative translation */
+    transition: transform 0.3s ease-in-out; /* Smooth animation */
+    z-index: 10; /* Bring the hovered image to the front */
 }
 
 .artbox1 {
@@ -228,6 +255,12 @@ h2 {
     border-radius: 5px;
 
 
+}
+
+.row {
+    display: flex; /* Arrange containers in a row */
+    justify-content: center; /* Center the pair */
+    gap: 1rem; /* Add spacing between containers */
 }
 
 
