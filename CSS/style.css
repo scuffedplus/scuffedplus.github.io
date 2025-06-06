@@ -202,8 +202,9 @@ h2 {
 }
 
 .gallery-grid > img {
-    flex: 0 0 calc(50% - 1rem); /* Each image takes up half the row minus the gap */
-    max-width: calc(50% - 1rem); /* Ensure images fit within their container */
+    margin-top: 1rem;
+    width: 48%; /* Ensure images take up 48% of the row */
+    display: inline-block;
     height: auto; /* Maintain aspect ratio */
     border-width: 2px;
     border-style: dashed;
