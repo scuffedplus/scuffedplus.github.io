@@ -85,7 +85,7 @@
       nekoEl.style.height = "32px";
       nekoEl.style.position = "fixed";
       nekoEl.style.pointerEvents = "none";
-      nekoEl.style.backgroundImage = "url(https://github.com/adryd325/oneko.js/blob/main/oneko.gif?raw=true)";
+      nekoEl.style.backgroundImage = "url(https://github.com/scuffedplus/scuffedplus.github.io/blob/b0050832c1c739c64e1217d4a8e2541d6a9d72ed/JS/fox.png?raw=true)";
       nekoEl.style.imageRendering = "pixelated";
       nekoEl.style.left = `${nekoPosX - 32}px`;
       nekoEl.style.top = `${nekoPosY + 8}px`;
