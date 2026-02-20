@@ -263,4 +263,33 @@ h2 {
     gap: 1rem; /* Add spacing between containers */
 }
 
+/* Make sidebar a vertical flex column */
+.sidenav {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* full height */
+}
+
+/* Let the nav list take natural space */
+.sidenav ul {
+    flex: 0 0 auto;
+}
+
+/* Button wall at bottom */
+.button-wall {
+    margin-top: auto; /* pushes to bottom */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: flex-start; /* left aligned */
+}
+
+/* Optional: crisp pixel look */
+.button-wall img {
+    image-rendering: pixelated;
+    display: block;
+}
+
+
 
